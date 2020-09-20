@@ -1,0 +1,188 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+		height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+}
+#mask{
+	height: 100%;
+	background-image: url(img51.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(5px);
+}
+.nav-top{
+	display: flex;
+	width: 100%;
+	position: absolute;
+	top: 10px;
+	z-index: 10;
+}
+.nav-top .nav-top-left{
+	margin-left: 3%;
+	width: 10%;
+}
+.nav-top .nav-top-left p{
+	line-height: 40px;
+	font-size: 25px;
+	font-weight: 600;
+	color: #fff;
+}
+.nav-top .nav-top-right{
+	display: flex;
+	justify-content: space-around;
+	width: 300px;
+    height: 40px;
+    margin-left: 2%;
+}
+.parent {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+.search {
+    width: 300px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+.icon-uniE901 {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("img/search.jpg") no-repeat -2px -99px;
+    top: 40%;
+    left: 95%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.container{
+	position: absolute;
+	width: 60%;
+	top: 15%;
+	left: 23%;
+	display: flex;
+
+}
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 20%;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    box-sizing: border-box;
+    padding: 20px 20px 20px 50px;
+    border: 1px solid #ccc;
+    width: 80%;
+    border-left: none;
+    height: 500px;
+    background: rgba(255,255,255,.8);
+    border-radius: 0 10px 10px 0;
+    text-decoration: none;
+    position: relative;
+}
+#nav{
+	box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-left: none;
+    width: 0;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    position: relative;
+    transition: ease .5s;
+    overflow: hidden;
+    
+}
+#nav button {
+    display: block;
+    background-color: #f1f1f1;
+    color: black;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    text-align: center;
+}
+#nav button:hover {
+    background-color: #ddd;
+}
+
+#nav button.active {
+    background-color: #ccc;
+}
+
+.tabcontent td{
+	text-align: center;
+	font-weight: 600;
+}
+.tabcontent .small{
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+.tabcontent .bed{
+	font-weight: 700;
+	font-size: 25px;
+}
+.tabcontent .watch{
+	font-size: 18px;
+	font-weight: 505;
+}
+
+
+
+
+
+.return{
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
+}
+.return a{
+
+}

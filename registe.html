@@ -1,0 +1,152 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/registe.css">
+<meta charset="utf-8">
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<div id="mask"></div>
+	<div class="drog">
+		<h2 class="title">
+			<span class="line"></span>
+			<span class="title_name">注册页</span>
+			<span class="line"></span>
+		</h2>
+		<table>
+			<tbody>
+				<tr>
+					<td class="td-left">姓名:</td>
+					<td><input type="text" class="input1" placeholder="请输入2~20个字符" required="" id="username"></td>
+				</tr>
+				<tr>
+					<td class="td-left">密码:</td>
+					<td><input type="password" class="input1" placeholder="请输入6~20个字符的密码" required="" id="password1"></td>
+				</tr>
+				<tr>
+					<td class="td-left">确认密码:</td>
+					<td><input type="password" class="input1" placeholder="请再次输入密码" id="password2"></td>
+				</tr>
+				<tr>
+					<td class="td-left">电话:</td>
+					<td><input type="password" class="input1" placeholder="请输入电话" id="phone"></td>
+				</tr>
+				<tr>
+					<td class="td-left">邮箱:</td>
+					<td><input type="password" class="input1" placeholder="请输入邮箱" id="mail"></td>
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr class="bottom">
+						<td>
+							<!-- <div class="submit"><a>登陆</a></div> -->
+							 <a href="load.html">
+								<input type="submit" name="" value="登录" class="submit" required="">
+							</a>
+						</td>
+						<td>
+							<!-- <div class="reset"><a>注册</a></div> -->
+							<input type="submit" name="" value="注册" class="reset" id="btn">
+						</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			var Btn=document.getElementById("btn");
+			Btn.onclick=function(){			
+				//验证用户名	
+				var name=document.getElementById("username");
+				var str=name.value;
+				var re= /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]/im;
+
+				if(name.value==''||name.value==null){
+					alert('请输入用户名');	
+					return false;			
+				}
+				else if(name.value.length>20 || name.value.length<2){
+					alert('用户名长度不合法');	
+					return false;				
+				}
+				else if(re.test(str)){
+					alert('用户名不能含有字符')
+				}
+
+
+				//验证密码
+				var pass=document.getElementById("password1");
+				var ipass=pass.value;
+				var mima= /*/^(?![0-9]+$)(?![^0-9]+$)(?![a-zA-Z]+$)(?![^a-zA-Z]+$)(?![a-zA-Z0-9]+$)[a-zA-Z0-9\\S]+$/;*/
+
+				/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{4,16}$/; 
+
+				if(pass.value ==''){
+					alert('密码不能为空');
+
+					return false;
+				}
+				else if(pass.value.length>20 || pass.value.length<6){
+					alert('密码长度不合法');
+					return false;
+				}
+				else if(!mima.test(ipass)){
+					alert("密码强度不够");
+					return false;
+				}
+
+
+
+				//验证确认密码
+				var passAgain=document.getElementById('password2');
+				if(passAgain.value ==''){
+					alert('请再次确认密码');
+					return false;
+				}
+				else if(pass.value != passAgain.value){
+					alert('两次密码不一致');
+					return false;
+				}
+
+
+				//验证邮箱
+				var Mail=document.getElementById("mail");
+				var iMail=Mail.value;
+				var patrn=iMail.match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/); 
+				if(Mail.value==''||Mail.value==null){
+					alert('请输入邮箱');	
+					return false;	
+				}
+				else if(patrn==null){
+					alert("邮箱格式不正确");
+					return false;
+				}
+
+				//验证手机号
+				var Phone=document.getElementById("phone");
+				var iphone=Phone.value;
+				/*var shouji= /^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/; */
+				var shouji= /^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/;
+				if(Phone.value==''||Phone.value==null){
+					alert("请输入手机号");
+					return false;
+				}
+				else if(Phone.value.length<8||Phone.value.length>11){
+					alert("手机号码长度不合法");
+					return false;
+				}
+				else if(!shouji.test(iphone)){
+					alert("手机号不合法");
+					return false;
+				}  
+			}
+		}
+	</script>
+</body>
+</html>

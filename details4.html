@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/details4.css">
+	<link rel="stylesheet" type="text/css" href="font/style.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="banner_box">
+		<div class="nav-top">
+			<div class="nav-top-left">
+				<p>酒店预定系统</p>
+			</div>
+			<div class="nav-top-right">
+				<div class="registe">
+					<a href="my.html">
+					 <span class="icon--"></span>
+					</a>
+				</div>
+				<div class="load">
+					<a href=" ">注销</a>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">		
+				<div class="container-left">
+					<div class="left-img">
+						<img src="img/img41.jpg" id="myImg">
+						<!-- 弹窗 -->
+						<div id="myModal" class="modal">
+ 						 	<!-- 关闭按钮 -->
+ 							<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  							<!-- 弹窗内容 -->
+  							<img class="modal-content" id="img01">
+ 
+  							<!-- 文本描述 -->
+  							<div id="caption">11111</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="container-middle">
+					<div class="middle-img1">
+						<img src="img/img42.jpg" id="myImg1">
+					</div>
+					<div class="middle-img2">
+						<img src="img/img43.jpg" id="myImg2">
+					</div>
+				</div>
+				<div class="container-right">
+					<div class="right-img1">
+						<img src="img/img44.jpg" id="myImg3">
+					</div>
+					<div class="right-img2">
+						<img src="img/img45.jpg" id="myImg4">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 弹窗 -->
+		<script type="text/javascript">
+		window.onload=function(){
+		// 获取弹窗
+		var modal = document.getElementById('myModal'); 
+		// 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+		var img = document.getElementById('myImg');
+		var img1 = document.getElementById('myImg1');
+		var img2 = document.getElementById('myImg2');
+		var img3 = document.getElementById('myImg3');
+		var img4 = document.getElementById('myImg4');
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		// 获取 <span> 元素，设置关闭按钮
+		var span = document.getElementsByClassName("close")[0];
+		img.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		img1.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		img2.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		img3.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		img4.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		// 当点击 (x), 关闭弹窗
+		span.onclick = function() { 
+  		modal.style.display = "none";
+		}
+	}
+</script>
+
+
+
+
+		<div class="bottom">
+		<div class="left">
+			<h1 style="margin-bottom: 1%;margin-top: 5%">高级大床房</h1>
+			<div class="left-wrap">
+				<div class="left-content">
+					<span class="icon-4" ></span>
+					<span class="left-content-word">一间卧室</span>
+				</div>
+				<div class="left-content">
+					<span class="icon-3"></span>
+					<span>一张床</span>
+				</div>
+				<div class="left-content">
+					<span class="icon-2"></span>
+					<span>一间卫生间</span>
+				</div>
+				<div class="left-content">
+					<span class="icon-1"></span>
+					<span>最多住2人</span>
+				</div><br><br>
+			</div>
+			
+			<div class="rag">
+				<div><span class="boot">费用政策</span></div>
+				<div class="rag-right">
+					<span>加长：68/人</span><br>
+					<span >加床：￥200</span><br>
+				</div>
+			</div>
+			
+			<div class="rag">
+				<div><span class="boot">便利设施</span></div>
+				<div class="rag-right"><p class="write">房屋靠近静安寺､淮海的中路陕西的南路､永康路等,是上海最小资的区域,几乎可以找到所有美食和网红咖啡店小区,1km内有4个地铁站,非常适合希望发掘上海的你｡</p></div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="bill">
+				<span class="tag">￥358</span>
+				<div class="line">
+					<div class="line-content">
+						<span class="icon-5"></span>
+						<span>夏季特惠8.5折</span>
+					</div>
+					<div class="line-content line-drag">
+						<span class="icon-5"></span>
+						<span>夏季特惠8.5折</span>
+					</div>
+					<div class="line-content line-drag">
+						<span class="icon-5"></span>
+						<span>夏季特惠8.5折</span>
+					</div>
+				</div>
+				<form action="#" method="post">
+						<div class="gaps">
+							<p></p>
+							<span class="birth">日期</span>
+							<div class="wrap">
+								<input type="text" class="room" id="startTime" placeholder="入住日期" style="border: none;" required="">
+								<span class="icon-6" style="line-height: 120%;font-size: 30px"></span>
+								<input type="text" class="room" id="endTime" placeholder="退房日期" style="border: none;" required="">
+							</div>
+						</div>
+						<!-- <div class="gaps">
+							<p></p>
+							<span class="birth"></span><input type="text" class="room" id="endTime" placeholder="退房日期">
+						</div> -->
+						<!--日期日历插件-->
+						<script src="js/calendar.js"></script>
+
+						<!--方法调用-->
+						<script>
+							$('.room').datePicker({
+								okFunc: function (date) {
+									console.log(date);
+								}
+							});
+						</script>
+
+
+
+						<div class="gaps">
+							<p></p>
+							<span class="birth">人数</span><input type="text" name="text"  required="" class="fed" id="ren">
+						</div>
+						<div class="gaps">
+							<p></p>
+							<span class="birth">姓名</span><input type="text" name="Name" required="" class="fed" id="username">
+						</div>
+						<div class="gaps">
+							<p></p>
+							<span class="birth">电话</span><input type="text" name="Phone Number"  required="" class="fed" id="phone">
+						</div>
+						<div class="gaps">
+							<p></p>
+							<span class="birth">身份证号</span><input type="text" name="Name" required="" class="fed" id="card">
+						</div>
+						
+						<input type="submit" value="预定" class="btn" onclick="open_win()" style="border: none;">
+					</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<script>
+ function open_win(){
+	/*var Input=document.getElementsByTagName("input");*/
+	/*if(Input.value!=''){*/
+	var startTime=document.getElementById("startTime")
+		if(startTime.value==''||startTime.value==null){
+			alert('请输入入住日期');	
+			return false;			
+		}
+	var endTime=document.getElementById("endTime")
+		if(endTime.value==''||endTime.value==null){
+			alert('请输入退房日期');	
+			return false;			
+		}
+	var ren=document.getElementById("ren")
+		if(ren.value==''||ren.value==null){
+			alert('请输入预定的人数');	
+			return false;			
+		}
+	var name=document.getElementById("username")
+		if(name.value==''||name.value==null){
+			alert('请输入您的姓名');	
+			return false;			
+		}
+	var phone=document.getElementById("phone")
+		if(phone.value==''||phone.value==null){
+			alert('请输入预留号码');	
+			return false;			
+		}
+	var card=document.getElementById("card")
+		if(card.value==''||card.value==null){
+			alert('请输入您的身份证信息');	
+			return false;			
+		}
+
+	var r=confirm("确定预定");
+	if (r==true){
+		window.open("my.html");
+	}
+	else{
+		myWindow.close();
+	}
+/*}
+*/ }
+var myDate1 = new dateyearmonth({id:'txt_calendar'});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/administer.css">
+	<link rel="stylesheet" type="text/css" href="font/style.css">
+</head>
+<body>
+	<div id="mask"></div>
+	<div class="nav-top">
+			<div class="nav-top-left">
+				<p>酒店预定系统</p>
+			</div>
+			<div class="nav-top-right">
+				<form action="" class="parent">
+        			<input type="text" class="search" placeholder="搜索">
+        			<!-- <input type="button" name="" id="" class="btn"> -->
+        			<span class="icon-uniE901"></span>
+    			</form>
+			</div>
+		</div>
+	<div class="container">
+	<div class="tab">
+  		<button class="tablinks"  onclick="du()" id="defaultOpen" style="background-color: #ccc;">
+  			<span class="icon-1" style="margin:0 7%"></span>我的预定
+  		</button>
+  		<button class="tablinks"  onclick="yu()" id="ke">
+  			<span class="icon-1" style="margin:0 7%"></span>客房信息
+  		</button>
+  		
+	</div>
+
+
+	<div id="nav">
+		<table height="100%" width="100%">
+			<tr height="15%" width="100%">
+				<td><button>高级大床房</button></td>
+			</tr>
+			<tr height="15%" width="100%">
+				<td><button>高级双人床</button></td>
+			</tr>
+			<tr height="15%" width="100%">
+				<td><button>家庭房</button></td>
+			</tr>
+			<tr height="15%" width="100%">
+				<td><button>行政套房</button></td>
+			</tr>
+			<tr height="15%" width="100%">
+				<td><button>豪华套房</button></td>
+			</tr>
+			<tr height="15%" width="100%">
+				<td><button>钟点房</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="London" class="tabcontent">
+  		<table width="100%">
+			<tr width="100%">
+				<td width="15%">姓名</td>
+				<td width="15%">电话</td>
+				<td width="15%">身份证号</td>
+				<td width="15%">房型</td>
+				<td width="15%">日期</td>
+				<td width="15%">价格</td>
+			</tr>
+  		</table> 
+  		<div class="return">
+			<a href="index.html">返回首页</a>
+  		</div>
+	</div>
+
+	<div id="Paris" class="tabcontent" style="display: none;">
+  		<table width="100%">
+			<tr width="100%">
+				<td width="22%">房间号</td>
+				<td width="22%">已预定/未预定</td>
+				<td width="22%">入住</td>
+				<td width="22%">退房</td>
+			</tr>
+  		</table> 
+	</div>
+</div>
+<script type="text/javascript">
+		
+		// function openCity(evt, cityName) {
+  //   		var i, tabcontent, tablinks;
+  //   			tabcontent = document.getElementsByClassName("tabcontent");
+    		
+  //   		for (i = 0; i < tabcontent.length; i++) {
+  //       		tabcontent[i].style.display = "none";
+  //       		 nav.style.display = "block";
+  //   		}
+  //   		tablinks = document.getElementsByClassName("tablinks");
+  //   		for (i = 0; i < tablinks.length; i++) {
+  //       		tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   		}
+  //   		document.getElementById(cityName).style.display = "block";
+  //   		evt.currentTarget.className += " active";
+		// }
+		// document.getElementById("defaultOpen").click();
+		
+
+
+		function du(){
+			var nav = document.getElementById("nav");
+			var defaultOpen = document.getElementById("defaultOpen");
+			var ke = document.getElementById("ke");
+			var London = document.getElementById("London");
+			var Paris = document.getElementById("Paris");
+			var tab = document.getElementsByClassName("tab");
+			var tablinks = document.getElementsByClassName("tablinks");
+
+
+			London.style.display = "block";
+			Paris.style.display = "none";
+			nav.style.width = "0";
+			defaultOpen.style.backgroundColor = "#ccc";
+			ke.style.backgroundColor = "#f1f1f1";
+
+		}
+		function yu(){
+			var nav = document.getElementById("nav");
+			var defaultOpen = document.getElementById("defaultOpen");
+			var ke = document.getElementById("ke");
+			var London = document.getElementById("London");
+			var Paris = document.getElementById("Paris");
+			var tab = document.getElementsByClassName("tab");
+
+			London.style.display = "none";
+			Paris.style.display = "block";
+			nav.style.width = "30%";
+			defaultOpen.style.backgroundColor = "#f1f1f1";
+			ke.style.backgroundColor = "#ccc";
+
+
+		}
+
+	</script>
+</body>
+</html>

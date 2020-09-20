@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font: 15px;
+	height: 100%;
+}
+#mask{
+	height: 750px;
+	background-image: url(img61.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(5px);
+	position: relative;
+}
+.nav-top{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	height: 43px;
+	background: rgba(255,255,255,.8);
+	box-shadow: #D0C9C0 2px 2px 3px;
+	position: absolute;
+	top: 0;
+	position: fixed;
+}
+.nav-top .nav-top-left{
+	margin-left: 3%;
+}
+.nav-top .nav-top-left p{
+	color: #000;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 43px;
+}
+.maincontent{
+	width: 50%;
+	height: 70%;
+	display: flex;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+}
+.aside{
+	width:20%;
+	height: 100%;
+	float: left;
+	background: rgba(255,255,255,.8);
+}
+.photo{
+	width: 80%;
+	height: 22%;
+	border-radius: 160px;
+	overflow: hidden;
+	position: relative;
+	background-color: #bdbdbd;
+	margin: 8% 10%;
+}
+span{
+	color: #fff;
+	font-size: 80px;
+	text-align: center;
+	position: absolute;
+	top: 20%;
+	left: 18%;
+	line-height: 40px;
+}
+.right{
+	width: 77%;
+	height: 100%;
+	background: rgba(255,255,255,.8);
+	margin-left: 3%;
+}
+nav ul li a{
+	text-decoration: none;
+	color:  #484848;
+}
+.td-left{
+	width: 40%;
+	color: #4b4b4b;
+}
+.hide{
+	width: 100%;
+	height: 100%;
+}
+.hide-wrap{
+	width: 90%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10% 10% 4%;
+}
+.input1{
+	width: 80%;
+	height: 30px;
+	border: 1px solid rgb(219, 213, 213) !important;
+}
+.input1::-webkit-input-placeholder{
+	transition: .5s;
+	transform-origin: left top;
+	font-size: 11px;
+}
+.input1::-moz-placeholder{
+	transition: .5s;
+	transform-origin: left top;
+	font-size: 11px;
+}
+.input1::-ms-input-placeholder{
+	transition: .5s;
+	transform-origin: left top;
+	font-size: 11px;
+}
+.submit{
+	border: none;
+	width: 100px;
+	height: 30px;
+	margin-left: 25%;
+	border-radius: 3px;
+	color: white;
+	-moz-appearance: none;
+	transition: ease .5s;
+	background: rgb(223, 60, 71) !important;
+	margin-top: 5%;
+	cursor: pointer;
+}
+.submit:hover {
+    background: rgb(255, 90, 95) !important;
+}
+.bottom a{
+	text-decoration: none;
+	color: #fff;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>修改</title>
+	<link rel="stylesheet" type="text/css" href="css/revise.css">
+	<link rel="stylesheet" type="text/css" href="font/style.css">
+</head>
+<body>
+	<div id="mask"></div>
+	<div class="nav-top">
+		<div class="nav-top-left">
+			<p>酒店预定系统</p>
+		</div>
+	</div>
+	<div class="maincontent">
+		<div class="aside">
+			<div class="photo">
+					<span class="icon--"></span>
+			</div>
+		</div>
+		<div class="right">
+			<form action="" class="hide">
+		<table style="width: 100%" class="hide-wrap">
+			<tbody>
+				<tr>
+					<td class="td-left">真实姓名:</td>
+					<td><input type="text" class="input1" placeholder="请输入中文名字" required="" id="name" name="name"></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">身份证号:</td>
+					<td><input type="text" class="input1" placeholder="请输入有效的身份证" id="id" name="id"></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">性别:</td>
+					<td>
+						<input type="radio" name="sex" checked>男
+						<input style="margin-left: 5%" type="radio" name="sex">女
+					</td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">电话:</td>
+					<td><input type="text" class="input1" placeholder="请输入8~11位电话号码" id="phone" name="phone"></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">用户名:</td>
+					<td><input type="password" class="input1" placeholder="请输入2~10位不含有特殊字符" id="username" name="username"></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">密码:</td>
+					<td><input type="password" class="input1" placeholder="6~20位含有英文、数字、特殊字符" required="" id="password1" name="password1"></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td class="td-left">确认密码:</td>
+					<td><input type="password" class="input1" placeholder="请再次输入密码" id="password2" name="password2"></td>
+				</tr>			
+				<tr></tr>
+				<tr></tr>
+				<tr class="bottom">
+					<td class="td-left" ></td>
+					<td style="text-align: right;">
+						<a href="">
+							<input type="submit" name="revise" value="确定修改" class="submit" required="" id="btn">
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
+</div>
+<script type="text/javascript">		
+		window.onload=function(){
+			var Btn = document.getElementById("btn");
+			Btn.onclick = function(){	
+
+				//验证真实姓名
+				var name = document.getElementById("name");
+				var strname = name.value;
+				var ming =   /^[\u4E00-\u9FA5]{2,4}$/;
+
+				if(name.value==''||name.value==null){
+					alert("姓名不能为空");	
+					return false;			
+				}
+				else if(!ming.test(strname)){
+					alert("请输入中文名字");
+					return false;
+				}
+
+
+				//验证身份证号码
+				var id = document.getElementById("id");
+				var strid = id.value;
+				var shenfen = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/; 
+
+				if(id.value==''||id.value==null){
+					alert("身份证号码不能为空");	
+					return false;			
+				}
+				else if(!shenfen.test(strid)){
+					alert("请输入有效的身份证");
+					return false;
+				}
+
+
+				//验证手机号
+				var Phone = document.getElementById("phone");
+				var iphone = Phone.value;
+				var shouji = /^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/;
+				if(Phone.value==""||Phone.value==null){
+					alert("请输入手机号");
+					return false;
+				}
+				else if(Phone.value.length<8||Phone.value.length>11){
+					alert("手机号码长度不合法");
+					return false;
+				}
+				else if(!shouji.test(iphone)){
+					alert("手机号不合法");
+					return false;
+				}  
+
+
+				//验证用户名	
+				var name = document.getElementById("username");
+				var str = name.value;
+				var re = /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘’，。、]/im;
+
+				if(name.value==""||name.value==null){
+					alert("请输入用户名");	
+					return false;			
+				}
+				else if(name.value.length>10 || name.value.length<2){
+					alert("用户名长度不合法");	
+					return false;				
+				}
+				else if(re.test(str)){
+					alert("用户名不能含有字符");
+					return false;
+				}
+
+
+				//验证密码
+				var pass = document.getElementById("password1");
+				var ipass = pass.value;
+				var mima = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{4,16}$/; 
+
+				if(pass.value ==""){
+					alert("密码不能为空");
+					return false;
+				}
+				else if(pass.value.length>20 || pass.value.length<6){
+					alert("密码长度不合法");
+					return false;
+				}
+				else if(!mima.test(ipass)){
+					alert("密码强度不够");
+					return false;
+				}
+
+
+				//验证确认密码
+				var passAgain = document.getElementById("password2");
+				if(passAgain.value ==""){
+					alert("请再次确认密码");
+					return false;
+				}
+				else if(pass.value != passAgain.value){
+					alert("两次密码不一致");
+					return false;
+				}		
+			}
+		}
+	</script>
+</body>
+</html>
